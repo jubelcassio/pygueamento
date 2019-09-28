@@ -8,13 +8,22 @@
     })(window,document,'script','dataLayer','GTM-5S6JSF9');</script>
   <!-- End Google Tag Manager -->
   </head>
-
-  <body>
+  <body onload="brython();">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5S6JSF9"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <a href="#">Test Link, click to fire an event</a>
+    <a id="site_link" href="#">Test Link, click to fire an event</a>
+
+    <div id="site_menu">
+      <ul>
+        <li><a href='#1'>Menu 1</a></li>
+        <li><a href='#2'>Menu 2</a></li>
+        <li><a href='#3'>Menu 3</a></li>
+        <li><a href='#4'>Menu 4</a></li>
+      </ul>
+    </div>
+
   </body>
 </html>
