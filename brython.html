@@ -1,5 +1,7 @@
 <html>
   <head>
+  <script type="text/javascript" src="brython.js"></script>
+  <script type="text/javascript" src="brython_stdlib.js"></script>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -7,14 +9,16 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5S6JSF9');</script>
   <!-- End Google Tag Manager -->
+
   </head>
 
-  <body>
+  <body onload="brython(); dataLayer.push({brython:true})">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5S6JSF9"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <a href="/brython.html">Brython Implementation</a>
+    <a href="index.html">Home</a>
+    <a href="#">Test Link, click to fire an event</a>
   </body>
 </html>
