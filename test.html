@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.7.5/brython.min.js">
+    </script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.7.5/brython_stdlib.js">
+    </script>
+    <script type="text/python">
+        from random import randint
+
+        print("\nRandom numbers:")
+        numbers = [randint(50, 1000) for i in range(10) if i % 2 == 0]
+        print(numbers)
+
+
+        letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+        print("\nenumerate function:")
+        for i, letter in enumerate(letters):
+            print(i, letter)
+
+        print("\nList Comprehension:")
+        print({key: value for key, value in zip(numbers, letters)})
+
+
+        class Vector():
+            def __init__(self, x, y):
+                self.x = x
+                self.y = y
+
+            def __add__(self, w):
+                return Vector(self.x+w.x, self.y+w.y)
+            def __radd__(self, w):
+                return self._radd__(w)
+
+            def __repr__(self):
+                return [self.x, self.y]
+            def __str__(self):
+                return self.__repr__()
+
+        v = Vector(5, 10)
+        w = Vector(5, 0)
+        u = v + w
+
+        print("\nOperator overloading:")
+        print(v)
+        print(w)
+        print(u)       
+
+    </script>
+
+  </head>
+  <body onload="brython();">
+    <a id="site_link" href="#">Test Link, click to fire an event</a>
+
+    <div id="site_menu">
+      <ul>
+        <li><a href='#1'>Menu 1</a></li>
+        <li><a href='#2'>Menu 2</a></li>
+        <li><a href='#3'>Menu 3</a></li>
+        <li><a href='#4'>Menu 4</a></li>
+      </ul>
+    </div>
+
+  </body>
+</html>
