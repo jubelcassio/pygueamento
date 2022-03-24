@@ -1,6 +1,7 @@
 function generate_user_id(){
     dataLayer.push({
-        "UserInfo": {
+        event: "UserInfo",
+        "user": {
             "userId": parseInt(Math.random() * 100000)
         }
     });
@@ -12,8 +13,9 @@ function change_history() {
 
 function virtual_page_view() {
     dataLayer.push({
-        "PageInfo": {
-            "page": "/virtual-page",
+        "event": "PageInfo",
+        "page": {
+            "virtual_path": "/virtual-page",
             "original_path": window.location.href
         }
     });
